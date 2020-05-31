@@ -1,0 +1,22 @@
+<div class="task-container">
+    <div class="header">
+        {{ title }}
+    </div>
+    <div class="task-content">
+        <div>
+            <div class="task-link pad-top-btm-10">
+                <a *ngFor="let type of taskTypes" (click)="onTaskChanged(type)" [class.active]="type === selectedTask"> {{
+                    type }}
+                </a>
+            </div>
+            <h3> {{ selectedTask }} </h3>
+            <app-task-list *ngFor="let task of taskList" [task]="task" [isCheckboxVisible]="isCheckboxVisible" (selected)="onSelected($event)">
+            </app-task-list>
+        </div>
+
+        <div class="add-task pad-top-btm-10" [formGroup]="addFormGroup" [hidden]="selectedTask !== 'Upcomming Tasks'">
+            <input type="text" formControlName="task">
+            <button class="btn btn-success" (click)="addTask()" [disabled]="addFormGroup.invalid">Add Task</button>
+        </div>
+    </div>
+</div>

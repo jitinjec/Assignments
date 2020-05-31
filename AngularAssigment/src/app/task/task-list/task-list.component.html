@@ -1,0 +1,4 @@
+<div class="task-list">
+    <span> {{ task.name }} </span>
+    <input type="checkbox" [(ngModel)]='task.isCompleted' *ngIf="isCheckboxVisible" (click)="onSelected(task)">
+</div>

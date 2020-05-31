@@ -1,0 +1,46 @@
+.task-container{
+    border: 1px solid #080808;
+    border-radius: 5px;
+    min-height: 45vh
+}
+
+.header{
+    padding: 5px;
+    background-color:#000000;
+    font-size: 14px;
+    color: #ffffff;
+    text-align: center;
+}
+.task-content{
+    padding: 10px
+}
+.task-link{
+    display: flex;
+    flex-wrap: wrap;
+}
+.task-link a{
+  padding-right: 25px;
+  cursor: pointer;
+}
+.task-link .active{
+    color: #055583
+}
+.heading{
+    display: flex;
+    justify-content: space-between;
+}
+.pad-top-btm-10{
+    padding: 10px 0
+}
+.add-task{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center
+}
+.add-task input{
+    flex: 1 1 auto;
+    margin: 0 5px 5px 0;
+}
+.add-task button{
+    margin-bottom: 5px;
+}
